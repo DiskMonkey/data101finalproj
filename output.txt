@@ -1,0 +1,70 @@
+naive bayes below:
+Confusion Matrix and Statistics
+
+   
+     3  4  5  6  7  8
+  3  0  0  0  1  0  0
+  4  1  0  2  2  0  0
+  5  0  5 80 35  2  0
+  6  0  2 41 53 16  0
+  7  0  0  3 23 13  0
+  8  0  0  0  3  3  1
+
+Overall Statistics
+                                          
+               Accuracy : 0.514           
+                 95% CI : (0.4544, 0.5733)
+    No Information Rate : 0.4406          
+    P-Value [Acc > NIR] : 0.007475        
+                                          
+                  Kappa : 0.2348          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: 3 Class: 4 Class: 5 Class: 6 Class: 7 Class: 8
+Sensitivity          0.000000  0.00000   0.6349   0.4530  0.38235 1.000000
+Specificity          0.996491  0.98208   0.7375   0.6509  0.89683 0.978947
+Pos Pred Value       0.000000  0.00000   0.6557   0.4732  0.33333 0.142857
+Neg Pred Value       0.996491  0.97509   0.7195   0.6322  0.91498 1.000000
+Prevalence           0.003497  0.02448   0.4406   0.4091  0.11888 0.003497
+Detection Rate       0.000000  0.00000   0.2797   0.1853  0.04545 0.003497
+Detection Prevalence 0.003497  0.01748   0.4266   0.3916  0.13636 0.024476
+Balanced Accuracy    0.498246  0.49104   0.6862   0.5519  0.63959 0.989474
+
+rpart below:
+Confusion Matrix and Statistics
+
+          
+pred_rpart  3  4  5  6  7  8
+         3  0  0  0  0  0  0
+         4  0  0  0  0  0  0
+         5  1  4 92 42  5  0
+         6  0  3 32 65 19  0
+         7  0  0  2 10 10  1
+         8  0  0  0  0  0  0
+
+Overall Statistics
+                                          
+               Accuracy : 0.5839          
+                 95% CI : (0.5244, 0.6417)
+    No Information Rate : 0.4406          
+    P-Value [Acc > NIR] : 7.824e-07       
+                                          
+                  Kappa : 0.3047          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: 3 Class: 4 Class: 5 Class: 6 Class: 7 Class: 8
+Sensitivity          0.000000  0.00000   0.7302   0.5556  0.29412 0.000000
+Specificity          1.000000  1.00000   0.6750   0.6805  0.94841 1.000000
+Pos Pred Value            NaN      NaN   0.6389   0.5462  0.43478      NaN
+Neg Pred Value       0.996503  0.97552   0.7606   0.6886  0.90875 0.996503
+Prevalence           0.003497  0.02448   0.4406   0.4091  0.11888 0.003497
+Detection Rate       0.000000  0.00000   0.3217   0.2273  0.03497 0.000000
+Detection Prevalence 0.000000  0.00000   0.5035   0.4161  0.08042 0.000000
+Balanced Accuracy    0.500000  0.50000   0.7026   0.6180  0.62127 0.500000
+There were 23 warnings (use warnings() to see them)

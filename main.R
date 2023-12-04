@@ -33,9 +33,41 @@ test <- testing(data_split)
 nb <- NaiveBayes(quality ~ ., data=train)
 pred <- predict(nb, test)
 
+
 #Generate Confusion Matrix
 tab_nb <- table(pred$class, test$quality)
-caret::confusionMatrix(tab_nb)  
+cat("\nnaive bayes below:\n")
+print(caret::confusionMatrix(tab_nb))
+
+
+#Now doing rpart:
+rpart_mod <- rpart(quality ~ ., data=train, method="class")
+library(rpart.plot)
+rpart.plot(rpart_mod)
+
+pred_rpart=predict(rpart_mod, test, type="class")
+#
+#Generate Confusion Matrix
+tab_rpart = table(pred_rpart,test$quality)
+cat("\nrpart below:\n")
+print(caret::confusionMatrix(tab_rpart))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
